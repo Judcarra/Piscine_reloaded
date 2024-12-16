@@ -19,9 +19,9 @@ int ft_iterative_factorial(int nb)
 
 int main()
 {
-	int nb = 4;
+	int nb = 12;
 	int result = ft_iterative_factorial(nb);
 
-	printf("result: %i", result);
+	printf("result: %i\n", result);
 	return (0);
 }
