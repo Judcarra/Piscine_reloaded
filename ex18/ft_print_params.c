@@ -1,22 +1,14 @@
 #include <stdio.h>
 
-void ft_putchar();
-
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int i;
 
-	if (argc == 1)
+	i = 0;
+	while (i < argc -1)
 	{
-		printf("no hay argumentos\n");
-	}
-	else
-	{
-		printf("argumentos: \n");
-	}
-	for (int i = 0; i < argc; i++)
-	{
-		printf("arg %d: %s\n", i, argv[i]);
+		i++;
+		printf("arguments %i: %s\n", i, argv[i]);
 	}
 	return (0);
 }
