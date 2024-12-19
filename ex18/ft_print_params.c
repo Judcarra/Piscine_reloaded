@@ -1,14 +1,26 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int main(int argc, char **argv)
+void	ft_putchar(char c)
 {
-	int i;
+	write (1, &c, 1);
+}
 
-	i = 0;
-	while (i < argc -1)
+int	main(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < argc)
 	{
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			ft_putchar(argv[i][j]);
+			j++;
+		}
 		i++;
-		printf("arguments %i: %s\n", i, argv[i]);
+		write (1, "\n", 1);
 	}
 	return (0);
 }
